@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKHealth", "IKHealth.csproj", "{854DCD6C-CB9A-4540-8D0F-16CD30CA13CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{854DCD6C-CB9A-4540-8D0F-16CD30CA13CB}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{854DCD6C-CB9A-4540-8D0F-16CD30CA13CB}.Debug|iPhone.Build.0 = Debug|iPhone
+		{854DCD6C-CB9A-4540-8D0F-16CD30CA13CB}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{854DCD6C-CB9A-4540-8D0F-16CD30CA13CB}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{854DCD6C-CB9A-4540-8D0F-16CD30CA13CB}.Release|iPhone.ActiveCfg = Release|iPhone
+		{854DCD6C-CB9A-4540-8D0F-16CD30CA13CB}.Release|iPhone.Build.0 = Release|iPhone
+		{854DCD6C-CB9A-4540-8D0F-16CD30CA13CB}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{854DCD6C-CB9A-4540-8D0F-16CD30CA13CB}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = IKHealth.csproj
+	EndGlobalSection
+EndGlobal
