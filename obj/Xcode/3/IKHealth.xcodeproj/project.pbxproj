@@ -1,0 +1,227 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22EB22000000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA7FA800000000000000000 /* AppDelegate.m */; };
+		2781B7000000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433E8F800000000000000000 /* CoreGraphics.framework */; };
+		384B97000000000000000000 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54086F800000000000000000 /* MainStoryboard_iPad.storyboard */; };
+		5EFB68000000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB840800000000000000000 /* Foundation.framework */; };
+		6FC548000000000000000000 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8220800000000000000000 /* MainStoryboard_iPhone.storyboard */; };
+		7621AB800000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 91DE84000000000000000000 /* AppDelegate.h */; };
+		7C7E0F000000000000000000 /* IKHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F7C0000000000000000000 /* IKHealthViewController.m */; };
+		967519000000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B231F1800000000000000000 /* UIKit.framework */; };
+		AD9B5C800000000000000000 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95835000000000000000000 /* HomeController.m */; };
+		D1E600000000000000000000 /* HomeController.h in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EBE800000000000000000 /* HomeController.h */; };
+		EB7171000000000000000000 /* IKHealthViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 72E498000000000000000000 /* IKHealthViewController.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C8EBE800000000000000000 /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		3EA7FA800000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		433E8F800000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		54086F800000000000000000 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		5687B0000000000000000000 /* IKHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72E498000000000000000000 /* IKHealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKHealthViewController.h; sourceTree = "<group>"; };
+		7AB840800000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8B8220800000000000000000 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		91DE84000000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B231F1800000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B3F7C0000000000000000000 /* IKHealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKHealthViewController.m; sourceTree = "<group>"; };
+		C95835000000000000000000 /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		589F04800000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967519000000000000000000 /* UIKit.framework in Frameworks */,
+				5EFB68000000000000000000 /* Foundation.framework in Frameworks */,
+				2781B7000000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		414C3E000000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B231F1800000000000000000 /* UIKit.framework */,
+				7AB840800000000000000000 /* Foundation.framework */,
+				433E8F800000000000000000 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		447A6FC00000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				4AD6D3400000000000000000 /* IKHealth */,
+				414C3E000000000000000000 /* Frameworks */,
+				9E0D5CC00000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4AD6D3400000000000000000 /* IKHealth */ = {
+			isa = PBXGroup;
+			children = (
+				91DE84000000000000000000 /* AppDelegate.h */,
+				1C8EBE800000000000000000 /* HomeController.h */,
+				72E498000000000000000000 /* IKHealthViewController.h */,
+				54086F800000000000000000 /* MainStoryboard_iPad.storyboard */,
+				8B8220800000000000000000 /* MainStoryboard_iPhone.storyboard */,
+				ABB688400000000000000000 /* Supporting Files */,
+			);
+			name = IKHealth;
+			sourceTree = "<group>";
+		};
+		9E0D5CC00000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5687B0000000000000000000 /* IKHealth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABB688400000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EA7FA800000000000000000 /* AppDelegate.m */,
+				C95835000000000000000000 /* HomeController.m */,
+				B3F7C0000000000000000000 /* IKHealthViewController.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		644861400000000000000000 /* IKHealth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB5744000000000000000000 /* Build configuration list for PBXNativeTarget "IKHealth" */;
+			buildPhases = (
+				212553800000000000000000 /* Sources */,
+				589F04800000000000000000 /* Frameworks */,
+				3CE22C000000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IKHealth;
+			productName = IKHealth;
+			productReference = 5687B0000000000000000000 /* IKHealth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AD04E000000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B77EEAC00000000000000000 /* Build configuration list for PBXProject "IKHealth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 447A6FC00000000000000000;
+			productRefGroup = 9E0D5CC00000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				644861400000000000000000 /* IKHealth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CE22C000000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FC548000000000000000000 /* MainStoryboard_iPhone.storyboard in Resources */,
+				384B97000000000000000000 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		212553800000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E600000000000000000000 /* HomeController.h in Sources */,
+				AD9B5C800000000000000000 /* HomeController.m in Sources */,
+				7621AB800000000000000000 /* AppDelegate.h in Sources */,
+				22EB22000000000000000000 /* AppDelegate.m in Sources */,
+				EB7171000000000000000000 /* IKHealthViewController.h in Sources */,
+				7C7E0F000000000000000000 /* IKHealthViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CDEECA000000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		E9ABA2800000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = IKHealth;
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB5744000000000000000000 /* Build configuration list for PBXNativeTarget "IKHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9ABA2800000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		B77EEAC00000000000000000 /* Build configuration list for PBXProject "IKHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDEECA000000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AD04E000000000000000000 /* Project object */;
+}
