@@ -71,6 +71,10 @@
     <Compile Include="IKHealthViewController.designer.cs">
       <DependentUpon>IKHealthViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeController.cs" />
+    <Compile Include="HomeController.designer.cs">
+      <DependentUpon>HomeController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />

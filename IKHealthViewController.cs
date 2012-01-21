@@ -11,7 +11,7 @@ namespace IKHealth
 			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
 		}
 
-		public IKHealthViewController (IntPtr handle) : base (handle)
+		public IKHealthViewController (IntPtr handle) : base(handle)
 		{
 		}
 		
