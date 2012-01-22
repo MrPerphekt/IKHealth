@@ -8,10 +8,8 @@ using MonoTouch.Foundation;
 
 namespace IKHealth
 {
-	[Register ("IKHealthViewController")]
-	partial class IKHealthViewController
+	[Register ("LoginView")]
+	partial class LoginView
 	{
-		[Action ("textFieldDidBeginEditing:")]
-		partial void textFieldDidBeginEditing (MonoTouch.Foundation.NSObject sender);
 	}
 }
