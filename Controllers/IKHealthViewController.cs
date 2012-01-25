@@ -7,8 +7,11 @@ namespace IKHealth
 {
 	public partial class IKHealthViewController : UIViewController
 	{
-		private const int kOFFSET_FOR_KEYBOARD = 60;
+		private const string LoginSegueName = "loginSegue";
 		
+		private SizeF _keyboardSize;
+		private UITextField _activeField = null;
+				
 		static bool UserInterfaceIdiomIsPhone {
 			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
 		}
@@ -45,11 +48,19 @@ namespace IKHealth
 		{
 			base.ViewWillAppear (animated);
 			
-			NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillShowNotification, OnKeyboardWillShow);
+			NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillShowNotification, OnKeyboardWillShow);	
+			
+			_loginButton.TouchUpInside += OnLoginTouchUpInside;
+			
+			_usernameField.Text = string.Empty;
+			_usernameField.ShouldReturn = textFieldShouldReturn;
+			
+			_passwordField.Text = string.Empty;
+			_passwordField.ShouldReturn = textFieldShouldReturn;
 		}
 		
 		public override void ViewDidAppear (bool animated)
-		{
+		{		
 			base.ViewDidAppear (animated);
 		}
 		
@@ -58,6 +69,11 @@ namespace IKHealth
 			base.ViewWillDisappear (animated);
 			
 			NSNotificationCenter.DefaultCenter.RemoveObserver(this, UIKeyboard.WillShowNotification, null);
+
+			if (_activeField != null)
+				_activeField.ResignFirstResponder();			
+			
+			_loginButton.TouchUpInside -= OnLoginTouchUpInside;
 		}
 		
 		public override void ViewDidDisappear (bool animated)
@@ -76,16 +92,13 @@ namespace IKHealth
 			
 		    if (moveUp)
 		    {
-		        // 1. move the view's origin up so that the text field that will be hidden come above the keyboard 
-		        // 2. increase the size of the view so that the area behind the keyboard is covered up.
-		        rect.Y -= kOFFSET_FOR_KEYBOARD;
-		        rect.Size.Height += kOFFSET_FOR_KEYBOARD;
+		        rect.Y -= _keyboardSize.Height;
+		        rect.Size.Height += _keyboardSize.Height;
 		    }
 		    else
 		    {
-		        // revert back to the normal state.
-		        rect.Y += kOFFSET_FOR_KEYBOARD;
-		        rect.Size.Height -= kOFFSET_FOR_KEYBOARD;
+		        rect.Y += _keyboardSize.Height;
+		        rect.Size.Height -= _keyboardSize.Height;
 		    }
 			
 			View.Frame = rect;
@@ -104,20 +117,62 @@ namespace IKHealth
 		}
 		
 		protected void OnKeyboardWillShow(NSNotification notification)
-		{
-			if (View.Frame.Y >= 0)
+		{			
+			_keyboardSize = notification.Name == UIKeyboard.WillHideNotification ? Size.Empty 
+								: ((NSValue)notification.UserInfo.ObjectForKey(UIKeyboard.FrameEndUserInfoKey)).RectangleFValue.Size;
+							    			
+			if (notification.Name == UIKeyboard.WillShowNotification)
 			{
-				MoveView(true);	
+				if ( View.Frame.Y >= 0 )
+					MoveView(true);	
 			}
-			else if(View.Frame.Y < 0)
+			else if(notification.Name == UIKeyboard.WillHideNotification)
 			{
-				MoveView(false);
+				if ( View.Frame.Y < 0 )
+					MoveView(false);
 			}
 		}
 			
+		protected void OnLoginTouchUpInside(object sender, EventArgs args)
+		{
+			if (_activeField != null)
+				_activeField.ResignFirstResponder();			
+		}
+		
 		partial void textFieldDidBeginEditing (MonoTouch.Foundation.NSObject sender)
 		{
+			_activeField = sender as UITextField;
+		}
+		
+		partial void textFieldDidEndEditing (MonoTouch.Foundation.NSObject sender)
+		{
+			_activeField = null;
+		}
+		
+		protected bool textFieldShouldReturn(UITextField textField)
+		{
+			if ( textField == null )
+				return false;
 			
+			if (!textField.ResignFirstResponder())
+				return false;
+		
+			if (textField is IKTextField)
+			{
+				var nextField = (textField as IKTextField).NextField;
+			
+				if (nextField != null)
+					nextField.BecomeFirstResponder();
+				
+				if (textField.ReturnKeyType == UIReturnKeyType.Go )
+				{
+					PerformSegue(LoginSegueName, this);
+				}
+				
+				return true;
+			}
+			
+			return true;
 		}
 	}
 }

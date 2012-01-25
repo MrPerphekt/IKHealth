@@ -67,22 +67,28 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="IKHealthViewController.cs" />
-    <Compile Include="IKHealthViewController.designer.cs">
-      <DependentUpon>IKHealthViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HomeController.cs" />
-    <Compile Include="HomeController.designer.cs">
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeController.designer.cs">
       <DependentUpon>HomeController.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginView.cs" />
-    <Compile Include="LoginView.designer.cs">
+    <Compile Include="Controllers\IKHealthViewController.cs" />
+    <Compile Include="Controllers\IKHealthViewController.designer.cs">
+      <DependentUpon>IKHealthViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\LoginView.designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\IKTextField.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
     <InterfaceDefinition Include="MainStoryboard_iPad.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Controls\" />
+  </ItemGroup>
 </Project>

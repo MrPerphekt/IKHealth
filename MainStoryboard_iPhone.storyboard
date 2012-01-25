@@ -26,30 +26,38 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VYJ-gr-LmT" kind="modal" id="2wy-zo-tub"/>
+                                    <segue destination="VYJ-gr-LmT" kind="modal" identifier="loginSegue" id="2wy-zo-tub"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" id="3ca-dd-XRL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" id="3ca-dd-XRL" customClass="IKTextField">
                                 <rect key="frame" x="42" y="267" width="237" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="textFieldDidBeginEditing:" destination="2" eventType="editingDidBegin" id="Tln-pb-jHd"/>
+                                    <action selector="textFieldDidEndEditing:" destination="2" eventType="editingDidEnd" id="deu-1v-xDY"/>
+                                    <outlet property="NextField" destination="AGj-Bx-smk" id="iqB-UK-u4r"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="AGj-Bx-smk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="AGj-Bx-smk" customClass="IKTextField">
                                 <rect key="frame" x="42" y="306" width="237" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <connections>
-                                    <action selector="textFieldDidBeginEditing:" destination="2" eventType="editingDidEnd" id="JPb-cu-NED"/>
+                                    <action selector="textFieldDidBeginEditing:" destination="2" eventType="editingDidBegin" id="1ZI-Hx-2YT"/>
+                                    <action selector="textFieldDidEndEditing:" destination="2" eventType="editingDidEnd" id="bmW-cL-d2W"/>
                                 </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="_loginButton" destination="gE9-7n-W82" id="IOa-U7-7Ue"/>
+                        <outlet property="_passwordField" destination="AGj-Bx-smk" id="o5j-Ep-w3M"/>
+                        <outlet property="_usernameField" destination="3ca-dd-XRL" id="LaC-VX-oN5"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-239" y="-372"/>
@@ -140,6 +148,16 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IKHealthViewController.h"/>
             <relationships>
                 <relationship kind="action" name="textFieldDidBeginEditing:"/>
+                <relationship kind="action" name="textFieldDidEndEditing:"/>
+                <relationship kind="outlet" name="_loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="_passwordField" candidateClass="IKTextField"/>
+                <relationship kind="outlet" name="_usernameField" candidateClass="IKTextField"/>
+            </relationships>
+        </class>
+        <class className="IKTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKTextField.h"/>
+            <relationships>
+                <relationship kind="outlet" name="NextField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="LoginView" superclassName="UIImageView">
