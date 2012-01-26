@@ -2,6 +2,7 @@ using MonoTouch.UIKit;
 using System.Drawing;
 using System;
 using MonoTouch.Foundation;
+using System.Collections.Generic;
 
 namespace IKHealth
 {
@@ -17,7 +18,7 @@ namespace IKHealth
 		}
 
 		public IKHealthViewController (IntPtr handle) : base(handle)
-		{
+		{	
 		}
 		
 		public override void DidReceiveMemoryWarning ()
@@ -33,8 +34,6 @@ namespace IKHealth
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
-			// Any additional setup after loading the view, typically from a nib.
 		}
 		
 		public override void ViewDidUnload ()
@@ -49,7 +48,7 @@ namespace IKHealth
 			base.ViewWillAppear (animated);
 			
 			NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillShowNotification, OnKeyboardWillShow);	
-			
+						
 			_loginButton.TouchUpInside += OnLoginTouchUpInside;
 			
 			_usernameField.Text = string.Empty;
@@ -73,7 +72,7 @@ namespace IKHealth
 			if (_activeField != null)
 				_activeField.ResignFirstResponder();			
 			
-			_loginButton.TouchUpInside -= OnLoginTouchUpInside;
+			_loginButton.TouchUpInside -= OnLoginTouchUpInside;			
 		}
 		
 		public override void ViewDidDisappear (bool animated)
@@ -130,7 +129,7 @@ namespace IKHealth
 			{
 				if ( View.Frame.Y < 0 )
 					MoveView(false);
-			}
+			}				
 		}
 			
 		protected void OnLoginTouchUpInside(object sender, EventArgs args)
@@ -148,7 +147,7 @@ namespace IKHealth
 		{
 			_activeField = null;
 		}
-		
+				
 		protected bool textFieldShouldReturn(UITextField textField)
 		{
 			if ( textField == null )

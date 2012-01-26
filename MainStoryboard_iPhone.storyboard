@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11B2118" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -50,6 +50,10 @@
                                     <action selector="textFieldDidEndEditing:" destination="2" eventType="editingDidEnd" id="bmW-cL-d2W"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Images/IKHealthLogo.png" id="Zn6-t2-Lyp">
+                                <rect key="frame" x="38" y="70" width="245" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -111,8 +115,8 @@
         <scene sceneID="7mj-4a-35J">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAY-IA-1ov" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="OfN-Zr-Db1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qtk-Mc-5zx">
+                <viewController id="OfN-Zr-Db1" customClass="PatientsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qtk-Mc-5zx" customClass="PatientsView">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -137,6 +141,9 @@
             <point key="canvasLocation" x="180" y="-372"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Images/IKHealthLogo.png" width="16" height="16"/>
+    </resources>
     <classes>
         <class className="HomeController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeController.h"/>
@@ -162,6 +169,12 @@
         </class>
         <class className="LoginView" superclassName="UIImageView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginView.h"/>
+        </class>
+        <class className="PatientsView" superclassName="UITableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PatientsView.h"/>
+        </class>
+        <class className="PatientsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PatientsViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

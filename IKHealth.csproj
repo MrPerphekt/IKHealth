@@ -80,6 +80,14 @@
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\IKTextField.cs" />
+    <Compile Include="Views\PatientsView.cs" />
+    <Compile Include="Views\PatientsView.designer.cs">
+      <DependentUpon>PatientsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\PatientsViewController.cs" />
+    <Compile Include="Controllers\PatientsViewController.designer.cs">
+      <DependentUpon>PatientsViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
@@ -90,5 +98,9 @@
     <Folder Include="Views\" />
     <Folder Include="Controllers\" />
     <Folder Include="Controls\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\IKHealthLogo.png" />
   </ItemGroup>
 </Project>
