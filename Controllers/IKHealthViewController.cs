@@ -52,10 +52,14 @@ namespace IKHealth
 			_loginButton.TouchUpInside += OnLoginTouchUpInside;
 			
 			_usernameField.Text = string.Empty;
-			_usernameField.ShouldReturn = textFieldShouldReturn;
 			
 			_passwordField.Text = string.Empty;
-			_passwordField.ShouldReturn = textFieldShouldReturn;
+			_passwordField.SegueName = LoginSegueName;
+			_passwordField.ViewController = this;
+			_passwordField.CanReturn = () => 
+			{
+				return Login();
+			};
 		}
 		
 		public override void ViewDidAppear (bool animated)
@@ -81,6 +85,11 @@ namespace IKHealth
 		}
 		
 		#endregion
+		
+		private bool Login()
+		{
+			return !string.IsNullOrEmpty(_usernameField.Text) && !string.IsNullOrEmpty(_passwordField.Text);
+		}
 		
 		private void MoveView(bool moveUp)
 		{
@@ -146,32 +155,8 @@ namespace IKHealth
 		partial void textFieldDidEndEditing (MonoTouch.Foundation.NSObject sender)
 		{
 			_activeField = null;
-		}
-				
-		protected bool textFieldShouldReturn(UITextField textField)
-		{
-			if ( textField == null )
-				return false;
 			
-			if (!textField.ResignFirstResponder())
-				return false;
-		
-			if (textField is IKTextField)
-			{
-				var nextField = (textField as IKTextField).NextField;
-			
-				if (nextField != null)
-					nextField.BecomeFirstResponder();
-				
-				if (textField.ReturnKeyType == UIReturnKeyType.Go )
-				{
-					PerformSegue(LoginSegueName, this);
-				}
-				
-				return true;
-			}
-			
-			return true;
-		}
+			//TODO: Check if keyboard is still visible, otherwise need to restore view.
+		}				
 	}
 }
