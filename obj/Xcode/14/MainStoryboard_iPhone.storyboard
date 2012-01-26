@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11B2118" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <viewController id="2" customClass="IKHealthViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3" customClass="LoginView">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gE9-7n-W82">
+                                <rect key="frame" x="85" y="354" width="151" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Login"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VYJ-gr-LmT" kind="modal" identifier="loginSegue" id="2wy-zo-tub"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" id="3ca-dd-XRL" customClass="IKTextField">
+                                <rect key="frame" x="42" y="267" width="237" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textFieldDidBeginEditing:" destination="2" eventType="editingDidBegin" id="Tln-pb-jHd"/>
+                                    <action selector="textFieldDidEndEditing:" destination="2" eventType="editingDidEnd" id="deu-1v-xDY"/>
+                                    <outlet property="NextField" destination="AGj-Bx-smk" id="iqB-UK-u4r"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="AGj-Bx-smk" customClass="IKTextField">
+                                <rect key="frame" x="42" y="306" width="237" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="textFieldDidBeginEditing:" destination="2" eventType="editingDidBegin" id="1ZI-Hx-2YT"/>
+                                    <action selector="textFieldDidEndEditing:" destination="2" eventType="editingDidEnd" id="bmW-cL-d2W"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Images/IKHealthLogo.png" id="Zn6-t2-Lyp">
+                                <rect key="frame" x="38" y="70" width="245" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="_loginButton" destination="gE9-7n-W82" id="IOa-U7-7Ue"/>
+                        <outlet property="_passwordField" destination="AGj-Bx-smk" id="o5j-Ep-w3M"/>
+                        <outlet property="_usernameField" destination="3ca-dd-XRL" id="LaC-VX-oN5"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-239" y="-372"/>
+        </scene>
+        <scene sceneID="bgT-57-pmm">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohi-hV-OyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Mkn-xd-fGx" customClass="HomeController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LI3-fs-whA">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ePu-3w-ez7">
+                                <rect key="frame" x="124" y="53" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OfN-Zr-Db1" kind="push" id="yuB-h5-dN9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8wY-8L-Nij">
+                                <rect key="frame" x="124" y="108" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Logout_Clicked:" destination="Mkn-xd-fGx" eventType="touchUpInside" id="TII-OA-LIP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="fws-Tc-yTF"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="622" y="-372"/>
+        </scene>
+        <scene sceneID="7mj-4a-35J">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HAY-IA-1ov" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="OfN-Zr-Db1" customClass="PatientsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qtk-Mc-5zx" customClass="PatientsView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Patients" id="7WQ-9m-BTy"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1040" y="-369"/>
+        </scene>
+        <scene sceneID="zp2-sG-u6C">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Le0-4s-xnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="VYJ-gr-LmT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="9Km-vQ-0f0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mkn-xd-fGx" kind="relationship" relationship="rootViewController" id="Qvr-0u-RHY"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="180" y="-372"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Images/IKHealthLogo.png" width="16" height="16"/>
+    </resources>
+    <classes>
+        <class className="HomeController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeController.h"/>
+            <relationships>
+                <relationship kind="action" name="Logout_Clicked:"/>
+            </relationships>
+        </class>
+        <class className="IKHealthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKHealthViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="textFieldDidBeginEditing:"/>
+                <relationship kind="action" name="textFieldDidEndEditing:"/>
+                <relationship kind="outlet" name="_loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="_passwordField" candidateClass="IKTextField"/>
+                <relationship kind="outlet" name="_usernameField" candidateClass="IKTextField"/>
+            </relationships>
+        </class>
+        <class className="IKTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKTextField.h"/>
+            <relationships>
+                <relationship kind="outlet" name="NextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="LoginView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginView.h"/>
+        </class>
+        <class className="PatientsView" superclassName="UITableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PatientsView.h"/>
+        </class>
+        <class className="PatientsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PatientsViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
