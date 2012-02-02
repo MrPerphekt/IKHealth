@@ -1,9 +1,13 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controls/IKTextField.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controls/PatientTableCell.xib.designer.cs">
     <Files>
-      <File FileName="AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="Controls/IKTextField.cs" Line="1" Column="1" />
+      <File FileName="../MonoTouch Samples/Custom Table Cells/CustomTableCellApp/Tab1/TableWithCorrectCustomCells.xib.cs" Line="47" Column="91" />
+      <File FileName="../MonoTouch Samples/Custom Table Cells/CustomTableCellApp/Tab1/CustomCell1.xib.cs" Line="1" Column="1" />
+      <File FileName="Views/PatientsView.cs" Line="1" Column="1" />
+      <File FileName="Controllers/PatientsViewController.cs" Line="10" Column="55" />
+      <File FileName="Controls/PatientTableCell.xib.cs" Line="14" Column="1" />
+      <File FileName="Controls/PatientTableCell.xib.designer.cs" Line="11" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

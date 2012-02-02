@@ -89,10 +89,20 @@
       <DependentUpon>PatientsViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="ClientInterface.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Data\TestDataHelper.cs" />
+    <Compile Include="Controls\PatientTableCell.xib.cs">
+      <DependentUpon>PatientTableCell.xib</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PatientTableCell.xib.designer.cs">
+      <DependentUpon>PatientTableCell.xib</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TableCellFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
     <InterfaceDefinition Include="MainStoryboard_iPad.storyboard" />
+    <InterfaceDefinition Include="Controls\PatientTableCell.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -100,8 +110,12 @@
     <Folder Include="Controllers\" />
     <Folder Include="Controls\" />
     <Folder Include="Images\" />
+    <Folder Include="Models\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\IKHealthLogo.png" />
+    <Content Include="Data\CSV_Database_of_First_Names.csv" />
+    <Content Include="Data\CSV_Database_of_Last_Names.csv" />
   </ItemGroup>
 </Project>

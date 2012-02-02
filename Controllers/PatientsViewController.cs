@@ -4,6 +4,8 @@ using System;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using System.Collections.ObjectModel;
+using MonoTouch.ObjCRuntime;
 
 namespace IKHealth
 {
@@ -11,6 +13,58 @@ namespace IKHealth
 	{
 		public PatientsViewController (IntPtr handle) : base (handle)
 		{
+		}	
+		
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			
+			TableView.Delegate = new PatientViewDelegate();
+			TableView.DataSource = new PatientViewDataSource();
+		}
+	}
+	
+	public class PatientViewDataSource : UITableViewDataSource
+	{		
+		private TableCellFactory<PatientTableCell> factory = new TableCellFactory<PatientTableCell>("PatientCell", "PatientTableCell");
+		private ObservableCollection<Patient> _patients;
+		
+		public PatientViewDataSource()
+		{
+			_patients = ClientInterface.Patients;
+		}
+			    
+	    public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+	    {
+			var cell = factory.GetCell(tableView);
+			
+			if ( cell != null )
+	        	cell.SetupCell(_patients[indexPath.Row]);
+	        
+	        return cell;
+	    }
+		
+	    public override int NumberOfSections(UITableView tableView)
+	    {
+	        return 1;
+	    }
+	    
+	    public override int RowsInSection(UITableView tableview, int section)
+	    {
+			return _patients.Count;
+	    }
+		
+	    public override string TitleForHeader(UITableView tableView, int section)
+	    {
+	        return "Section " + section;
+	    }
+	}
+	
+	public class PatientViewDelegate : UITableViewDelegate
+	{
+		public override float GetHeightForHeader (UITableView tableView, int section)
+		{
+			return 0.0f;
 		}	
 	}
 }
